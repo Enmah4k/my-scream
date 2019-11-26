@@ -6,21 +6,23 @@ import Axios from 'axios';
 import Scream from '../comps/Scream';
 
 export class Home extends Component {
-    state = { screams: null }
+    state = { screams: null };
 
     componentDidMount(){
-        Axios.get('/screams')
-        .then(res => {
+        Axios
+        .get('/screams')
+        .then((res) => {
             this.setState({
                 screams: res.data
             })
         }).catch(err => console.log(err))
     }
-
     render() {
         let recentScreamsMarkUp = this.state.screams ? (
             this.state.screams.map(scream => <Scream key={scream.screamId} scream={scream}/>)
-        ) : <p>Loading...</p>
+        ) : ( 
+            <p>Loading...</p> 
+        );
 
         return (
         <Grid container spacing={2}>
