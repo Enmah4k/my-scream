@@ -12,11 +12,10 @@ import dayjs from 'dayjs';
 const styles = {
   card: {
     display: 'flex',
-    marginBottom: 14,
-    padding: 0,
+    marginBottom: 20,
   },
   image: {
-    minWidth:100
+    minWidth: 200
   },
   content:{
       padding: 10,
@@ -44,7 +43,7 @@ class Scream extends Component {
         return (
             <Card className={classes.card}>
                 <CardMedia
-                image = { userImage }
+                image = { null }
                 title = "Profile image"                
                 className={classes.image}/>
                 <CardContent className={classes.content}>
