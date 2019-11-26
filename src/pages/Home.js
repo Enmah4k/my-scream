@@ -4,6 +4,7 @@ import Axios from 'axios';
 
 // Components
 import Scream from '../comps/Scream';
+import Profile from '../comp/Profile';
 
 export class Home extends Component {
     state = { screams: null };
@@ -30,7 +31,7 @@ export class Home extends Component {
                 {recentScreamsMarkUp}
             </Grid>
             <Grid item sm={4} xs={12}>
-                <p>Profile</p>
+                <Profile/>
             </Grid>
         </Grid>
         )
